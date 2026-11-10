@@ -1,0 +1,13 @@
+C:\iar\ewarm-9.70.4\arm\bin\armproc.dll
+
+ C:\iar\ewarm-9.70.4\arm\bin\armsim2.dll
+
+ "C:\Embedded program\lesson6\Debug\Exe\project.out"
+
+ --plugin=C:\iar\ewarm-9.70.4\arm\bin\armLibSupportUniversal.dll
+
+ --device_macro=C:\iar\ewarm-9.70.4\arm/config/debugger/TexasInstruments/LM4F.dmac
+
+ 
+
+

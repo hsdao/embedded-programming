@@ -1,0 +1,16 @@
+# Workspace và file tạm
+.metadata/
+*.log
+*.tmp
+
+# Kết quả biên dịch
+Debug/
+Release/
+build/
+*.o
+*.d
+*.elf
+*.map
+*.list
+/STM32CubeIDE_1.19.0/
+/RTOS Course/Workspace/Software&Toolchains/

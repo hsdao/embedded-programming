@@ -1,0 +1,39 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPDB_GEN
+  command = C$:\iar\ewarm-9.70.4\common\bin\ClangdCompDbGenerator.exe $gencommand -f "$rspfile_name"
+  description = Building $out...
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule COMPDB_LINK
+  command = C$:\iar\ewarm-9.70.4\common\bin\ClangdCompDbLinker.exe -f "$rspfile_name"
+  description = Building $out...
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+
+
+#Build steps
+build C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\bsp.c.json : COMPDB_GEN 
+    flags = C$:\iar\ewarm-9.70.4\arm\bin\iccarm.exe "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\bsp.c" -o "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\\" --no_unroll --no_inline --no_tbaa --no_scheduling --debug --endian=little --cpu=Cortex-M4 --fpu=VFPv4_sp --dlib_config C$:\iar\ewarm-9.70.4\arm\inc\c\DLib_Config_Normal.h -I "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\..\CMSIS\Include\\" -Om -e
+    gencommand = -output_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\bsp.c.json" -icc_path C$:\iar\ewarm-9.70.4\arm\bin\iccarm.exe -source_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\bsp.c" -work_dir "C$:\Embedded$ program\lesson$ 17\tm4c123-iar" -keyword_map_path C$:\iar\ewarm-9.70.4\common\config\ClangdConfig.json -object_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\bsp.o"
+    rspfile_name = C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\bsp.c.json.rsp
+
+build C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\main.c.json : COMPDB_GEN 
+    flags = C$:\iar\ewarm-9.70.4\arm\bin\iccarm.exe "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\main.c" -o "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\\" --no_unroll --no_inline --no_tbaa --no_scheduling --debug --endian=little --cpu=Cortex-M4 --fpu=VFPv4_sp --dlib_config C$:\iar\ewarm-9.70.4\arm\inc\c\DLib_Config_Normal.h -I "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\..\CMSIS\Include\\" -Om -e
+    gencommand = -output_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\main.c.json" -icc_path C$:\iar\ewarm-9.70.4\arm\bin\iccarm.exe -source_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\main.c" -work_dir "C$:\Embedded$ program\lesson$ 17\tm4c123-iar" -keyword_map_path C$:\iar\ewarm-9.70.4\common\config\ClangdConfig.json -object_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\main.o"
+    rspfile_name = C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\main.c.json.rsp
+
+build C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\startup_tm4c.c.json : COMPDB_GEN 
+    flags = C$:\iar\ewarm-9.70.4\arm\bin\iccarm.exe "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\startup_tm4c.c" -o "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\\" --no_unroll --no_inline --no_tbaa --no_scheduling --debug --endian=little --cpu=Cortex-M4 --fpu=VFPv4_sp --dlib_config C$:\iar\ewarm-9.70.4\arm\inc\c\DLib_Config_Normal.h -I "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\..\CMSIS\Include\\" -Om -e
+    gencommand = -output_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\startup_tm4c.c.json" -icc_path C$:\iar\ewarm-9.70.4\arm\bin\iccarm.exe -source_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\startup_tm4c.c" -work_dir "C$:\Embedded$ program\lesson$ 17\tm4c123-iar" -keyword_map_path C$:\iar\ewarm-9.70.4\common\config\ClangdConfig.json -object_file "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\startup_tm4c.o"
+    rspfile_name = C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\startup_tm4c.c.json.rsp
+
+build C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\compile_commands.json : COMPDB_LINK C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\bsp.c.json | C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\main.c.json $
+ C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\startup_tm4c.c.json
+    flags = -o "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\compile_commands.json" "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\bsp.c.json" "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\main.c.json" "C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\startup_tm4c.c.json"
+    rspfile_name = C$:\Embedded$ program\lesson$ 17\tm4c123-iar\dbg\compile_commands.json.rsp
+

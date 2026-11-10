@@ -1,0 +1,1 @@
+﻿"C:\Embedded program\lesson 17\tm4c123-iar\startup_tm4c.c" -o "C:\Embedded program\lesson 17\tm4c123-iar\dbg\\" --no_unroll --no_inline --no_tbaa --no_scheduling --debug --endian=little --cpu=Cortex-M4 --fpu=VFPv4_sp --dlib_config C:\iar\ewarm-9.70.4\arm\inc\c\DLib_Config_Normal.h -I "C:\Embedded program\lesson 17\tm4c123-iar\..\CMSIS\Include\\" -Om -e

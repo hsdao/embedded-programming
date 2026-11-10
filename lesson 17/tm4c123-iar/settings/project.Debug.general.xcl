@@ -1,0 +1,15 @@
+C:\iar\ewarm-9.70.4\arm\bin\armproc.dll
+
+ C:\iar\ewarm-9.70.4\arm\bin\armlmiftdi.dll
+
+ "C:\Embedded program\lesson 17\tm4c123-iar\dbg\c.out"
+
+ --plugin=C:\iar\ewarm-9.70.4\arm\bin\armLibSupportUniversal.dll
+
+ --device_macro=C:\iar\ewarm-9.70.4\arm/config/debugger/TexasInstruments/TM4C123.dmac
+
+ --flash_loader=C:\iar\ewarm-9.70.4\arm/config/flashloader/TexasInstruments/FlashTC4_H6_o.board
+
+ 
+
+

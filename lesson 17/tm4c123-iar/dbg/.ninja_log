@@ -1,0 +1,5 @@
+# ninja log v6
+0	131	8075398760981284	C:/Embedded program/lesson 17/tm4c123-iar/dbg/bsp.c.json	cc6a67d625b6c1
+132	239	8075398762299476	C:/Embedded program/lesson 17/tm4c123-iar/dbg/main.c.json	ec5edf2a83933e3
+240	348	8075398763375739	C:/Embedded program/lesson 17/tm4c123-iar/dbg/startup_tm4c.c.json	178d90f5fa995594
+349	382	8075398764479153	C:/Embedded program/lesson 17/tm4c123-iar/dbg/compile_commands.json	75033b7f9592705f
